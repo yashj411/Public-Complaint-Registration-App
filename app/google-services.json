@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "34421840831",
+    "firebase_url": "https://publiccomplaintregistration.firebaseio.com",
+    "project_id": "publiccomplaintregistration",
+    "storage_bucket": "publiccomplaintregistration.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:34421840831:android:aeae032c20d4a05a525f0a",
+        "android_client_info": {
+          "package_name": "com.example.publiccomplaintregistration"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "34421840831-a5hkl7uef12958pp1lv65meg02k4l057.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDXYY2mT709DqMSjjpOtLSmHANZACQ-vrI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "34421840831-a5hkl7uef12958pp1lv65meg02k4l057.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
