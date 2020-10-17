@@ -48,8 +48,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.182" />
 
-    <TextView
-        android:id="@+id/iVName"
+    <EditText
+        android:id="@+id/ETName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/email"
@@ -64,8 +64,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.326" />
 
-    <TextView
-        android:id="@+id/iVEmail"
+    <EditText
+        android:id="@+id/ETEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/email"
@@ -80,8 +80,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.424" />
 
-    <TextView
-        android:id="@+id/iVPassword"
+    <EditText
+        android:id="@+id/ETPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/email"
@@ -96,8 +96,8 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.524" />
 
-    <TextView
-        android:id="@+id/iVConfirmPassword"
+    <EditText
+        android:id="@+id/ETConfirmPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:background="@drawable/email"
