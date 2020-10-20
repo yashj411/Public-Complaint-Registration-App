@@ -33,7 +33,7 @@ public class login extends AppCompatActivity {
     Button loginbtn, googleLoginbtn;
     public FirebaseAuth mAuth = FirebaseAuth.getInstance();
     private GoogleSignInClient mGoogleSignInClient;
-    private int RC_SIGN_IN =10;
+    private int RC_SIGN_IN = 10;
 
     @Override
     protected void onStart() {
@@ -60,13 +60,15 @@ public class login extends AppCompatActivity {
                 .build();
         mGoogleSignInClient = GoogleSignIn.getClient(login.this, gso);
     }
+
     private void signIn() {
         googleLoginbtn = findViewById(R.id.btnLoginGoogle);
         googleLoginbtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent signInIntent = mGoogleSignInClient.getSignInIntent();
-                startActivityForResult(signInIntent, RC_SIGN_IN);
+                startActivityForResult(signInIntent,RC_SIGN_IN);
+
             }
         });
 
@@ -97,6 +99,8 @@ public class login extends AppCompatActivity {
                                         Log.d("TAG", "createUserWithEmail:success");
                                         Toast.makeText(login.this, "Login Done.",
                                                 Toast.LENGTH_SHORT).show();
+                                       Intent mainIntent = new Intent(getApplicationContext(),MainActivity.class);
+                                       startActivity(mainIntent);
                                     } else {
                                         // If sign in fails, display a message to the user.
                                         Log.w("TAG", "createUserWithEmail:failure", task.getException());
@@ -108,6 +112,8 @@ public class login extends AppCompatActivity {
                             });
                 }
             }
+
+
         });
     }
 
@@ -117,7 +123,7 @@ public class login extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent signupIntent = new Intent(login.this, Signup.class);
-                startActivity(signupIntent);
+                startActivityForResult(signupIntent,RC_SIGN_IN);
             }
         });
     }
@@ -137,7 +143,7 @@ public class login extends AppCompatActivity {
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
                 Log.w("Google login", "Google sign in failed", e);
-                Toast.makeText(login.this,e.getMessage(),Toast.LENGTH_SHORT).show();
+                Toast.makeText(login.this, e.getMessage(), Toast.LENGTH_SHORT).show();
             }
         }
     }
@@ -152,12 +158,14 @@ public class login extends AppCompatActivity {
                             // Sign in success, update UI with the signed-in user's information
                             Log.d("Signin", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(login.this,user.getEmail().toString(),
+                            Toast.makeText(login.this, user.getEmail().toString(),
                                     Toast.LENGTH_SHORT).show();
+                            Intent mainIntent = new Intent(login.this, MainActivity.class);
+                            startActivity(mainIntent);
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("Signin", "signInWithCredential:failure", task.getException());
-                            Toast.makeText(login.this,"sign in falied",
+                            Toast.makeText(login.this, "sign in falied",
                                     Toast.LENGTH_SHORT).show();
                         }
 
