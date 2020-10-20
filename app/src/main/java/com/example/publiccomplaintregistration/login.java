@@ -37,6 +37,7 @@ public class login extends AppCompatActivity {
 
     @Override
     protected void onStart() {
+        Log.i("login", "onStart: "+mAuth.getCurrentUser());
         super.onStart();
     }
 
@@ -54,11 +55,12 @@ public class login extends AppCompatActivity {
     }
 
     private void createRequest() {
+        // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestIdToken(getString(R.string.default_web_client_id))
                 .requestEmail()
                 .build();
-        mGoogleSignInClient = GoogleSignIn.getClient(login.this, gso);
+        mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
     }
 
     private void signIn() {
@@ -138,15 +140,16 @@ public class login extends AppCompatActivity {
             try {
                 // Google Sign In was successful, authenticate with Firebase
                 GoogleSignInAccount account = task.getResult(ApiException.class);
-                Log.d("Google login", "firebaseAuthWithGoogle:" + account.getId());
+                Log.d("TAG", "firebaseAuthWithGoogle:" + account.getId());
                 firebaseAuthWithGoogle(account.getIdToken());
             } catch (ApiException e) {
                 // Google Sign In failed, update UI appropriately
-                Log.w("Google login", "Google sign in failed", e);
-                Toast.makeText(login.this, e.getMessage(), Toast.LENGTH_SHORT).show();
+                Log.w("TAG", "Google sign in failed", e);
+                // ...
             }
         }
     }
+
 
     private void firebaseAuthWithGoogle(String idToken) {
         AuthCredential credential = GoogleAuthProvider.getCredential(idToken, null);
@@ -156,19 +159,15 @@ public class login extends AppCompatActivity {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
-                            Log.d("Signin", "signInWithCredential:success");
+                            Log.d("TAG", "signInWithCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            Toast.makeText(login.this, user.getEmail().toString(),
-                                    Toast.LENGTH_SHORT).show();
-                            Intent mainIntent = new Intent(login.this, MainActivity.class);
+                            Intent mainIntent = new Intent(login.this,MainActivity.class);
                             startActivity(mainIntent);
                         } else {
                             // If sign in fails, display a message to the user.
-                            Log.w("Signin", "signInWithCredential:failure", task.getException());
-                            Toast.makeText(login.this, "sign in falied",
-                                    Toast.LENGTH_SHORT).show();
+                            Log.w("TAG", "signInWithCredential:failure", task.getException());
                         }
-
+                        // ...
                     }
                 });
     }

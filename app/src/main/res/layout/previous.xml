@@ -33,11 +33,10 @@
         app:layout_constraintVertical_bias="0.079" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="338dp"
-        android:layout_height="596dp"
+        android:layout_width="310dp"
+        android:layout_height="290dp"
         android:layout_marginStart="36dp"
         android:layout_marginEnd="37dp"
-        android:layout_marginBottom="25dp"
         android:background="#EFEFEF"
         android:padding="10sp"
         android:paddingStart="10sp"
@@ -48,7 +47,9 @@
         android:paddingBottom="10sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         tools:listitem="@android:layout/simple_expandable_list_item_2" />
 
 

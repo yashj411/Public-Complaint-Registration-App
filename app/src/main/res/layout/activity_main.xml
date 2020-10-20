@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
- <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/tS"
@@ -7,91 +7,141 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/logo"
-        android:layout_width="66dp"
-        android:layout_height="58dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.156"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.054"
-        app:srcCompat="@drawable/pcrlogo" />
+   <ImageView
+       android:id="@+id/logo"
+       android:layout_width="66dp"
+       android:layout_height="58dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.156"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.054"
+       app:srcCompat="@drawable/pcrlogo" />
 
-    <TextView
-        android:id="@+id/titleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Public Complaint Registration"
-        android:textColor="@color/black"
-        android:textSize="17dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.718"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.079" />
-
-
-   <Button
-       android:id="@+id/button"
+   <TextView
+       android:id="@+id/titleText"
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
+       android:text="Public Complaint Registration"
+       android:textColor="@color/black"
+       android:textSize="17dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.718"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent"
+       app:layout_constraintVertical_bias="0.079" />
+
+   <ImageView
+       android:id="@+id/imageView5"
+       android:layout_width="311dp"
+       android:layout_height="413dp"
+       android:layout_marginStart="71dp"
+       android:layout_marginEnd="71dp"
+       android:layout_marginBottom="60dp"
+       app:layout_constraintBottom_toBottomOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.512"
+       app:layout_constraintStart_toStartOf="parent"
+       app:srcCompat="@drawable/guidelines" />
+
+   <Button
+       android:id="@+id/btnRegister"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="68dp"
+       android:layout_marginTop="280dp"
+       android:layout_marginEnd="68dp"
+       android:background="@drawable/login"
+       android:text="Register"
+       android:textAllCaps="false"
+       android:textColor="@android:color/white"
+       android:textSize="18sp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="0.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:id="@+id/btnGuidelines"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="68dp"
+       android:layout_marginTop="428dp"
+       android:background="@drawable/login"
+       android:text="Guidelines"
+       android:textAllCaps="false"
+       android:textColor="@android:color/white"
+       android:textSize="18sp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:id="@+id/btnPrevious"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="68dp"
+       android:layout_marginTop="356dp"
+       android:background="@drawable/login"
+       android:text="Previous"
+       android:textAllCaps="false"
+       android:textColor="@android:color/white"
+       android:textSize="18sp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <Button
+       android:id="@+id/btnContactAdmin"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="68dp"
+       android:layout_marginTop="504dp"
        android:background="@drawable/login"
        android:text="Contact Admin"
        android:textAllCaps="false"
        android:textColor="@android:color/white"
-       android:textSize="17dp"
-       app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintEnd_toEndOf="parent"
+       android:textSize="18sp"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintVertical_bias="0.672" />
-
-   <Button
-        android:id="@+id/button3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:layout_marginEnd="52dp"
-        android:background="@drawable/register"
-        android:text="Previous"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleText" />
-
-    <Button
-        android:id="@+id/button2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="28dp"
-        android:background="@drawable/register"
-        android:text="Register"
-        android:textAllCaps="false"
-        android:textColor="@android:color/white"
-        android:textSize="18sp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logo" />
+       app:layout_constraintTop_toTopOf="parent" />
 
    <Button
        android:id="@+id/btnSignout"
-       android:layout_width="266dp"
-       android:layout_height="43dp"
-       android:background="@drawable/register"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="68dp"
+       android:layout_marginTop="580dp"
+       android:background="@drawable/login"
        android:text="Signout"
        android:textAllCaps="false"
        android:textColor="@android:color/white"
        android:textSize="18sp"
-       app:layout_constraintBottom_toBottomOf="parent"
-       app:layout_constraintEnd_toEndOf="parent"
-       app:layout_constraintHorizontal_bias="0.531"
        app:layout_constraintStart_toStartOf="parent"
-       app:layout_constraintTop_toTopOf="parent"
-       app:layout_constraintVertical_bias="0.565" />
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <TextView
+       android:id="@+id/textView4"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="54dp"
+       android:layout_marginTop="46dp"
+       android:text="Hello there !"
+       android:textAppearance="@style/TextAppearance.AppCompat.Body2"
+       android:textSize="36sp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/logo" />
+
+   <TextView
+       android:id="@+id/textView5"
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="52dp"
+       android:text="welcome"
+       android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+       android:textSize="24sp"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
-
