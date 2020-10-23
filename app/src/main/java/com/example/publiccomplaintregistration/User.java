@@ -1,7 +1,7 @@
 package com.example.publiccomplaintregistration;
 
 public class User {
-    private String Name,Date,Department,Title,Description,Status;
+    private String Name,Date,Department,Title,Description,Status,ImageID;
 
     public User() {
     }
@@ -52,5 +52,13 @@ public class User {
 
     public void setStatus(String status) {
         Status = status;
+    }
+
+    public String getImageID() {
+        return ImageID;
+    }
+
+    public void setImageID(String imageID) {
+        ImageID = imageID;
     }
 }
