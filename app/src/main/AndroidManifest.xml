@@ -31,6 +31,9 @@
         <activity android:name=".Guidelines">
 
         </activity>
+        <activity android:name=".Last_slide">
+
+        </activity>
 
         <meta-data
             android:name="preloaded_fonts"

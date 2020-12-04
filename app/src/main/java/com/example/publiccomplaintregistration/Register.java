@@ -83,15 +83,15 @@ public class Register extends AppCompatActivity {
                 Fileuploader();
                 user.setImageID(imageid);
                 reff.child(String.valueOf(maxid+1)).setValue(user);
-                Toast.makeText(Register.this,"Your complaint has been registered successfully",Toast.LENGTH_SHORT).show();
-                 openActivity_main();
+                //Toast.makeText(Register.this,"Your complaint has been registered successfully",Toast.LENGTH_SHORT).show();
+                openLast_slide();
 
             }
         });
     }
 
-    private void openActivity_main(){
-        Intent intent2=new Intent(this,MainActivity.class);
+    public void openLast_slide(){
+        Intent intent2=new Intent(this,Last_slide.class);
         startActivity(intent2);
     }
 

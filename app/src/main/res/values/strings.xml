@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">PublicComplaintRegistration</string>
+    <string name="your_complaint_has_been_registered_with_us_successfully">Your complaint has been registered with us successfully !</string>
+    <string name="main_menu"><![CDATA[Main menu >]]></string>
 </resources>
