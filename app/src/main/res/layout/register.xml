@@ -63,51 +63,37 @@
         app:layout_constraintVertical_bias="0.239" />
 
     <EditText
-        android:id="@+id/tVDepartment"
-        android:layout_width="305dp"
-        android:layout_height="43dp"
-        android:background="@drawable/email"
-        android:hint="Department"
-        android:paddingLeft="15dp"
-        android:paddingTop="8dp"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.319" />
-
-    <EditText
         android:id="@+id/tVTitle"
         android:layout_width="303dp"
         android:layout_height="47dp"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="11dp"
         android:background="@drawable/email"
         android:hint="Title"
         android:paddingLeft="15dp"
         android:paddingTop="8dp"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tVDescription"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.405" />
+        app:layout_constraintTop_toBottomOf="@+id/tVDepartment" />
 
     <EditText
         android:id="@+id/tVDescription"
-        android:layout_width="308dp"
-        android:layout_height="217dp"
+        android:layout_width="312dp"
+        android:layout_height="196dp"
+        android:layout_marginStart="54dp"
+        android:layout_marginTop="11dp"
+        android:layout_marginBottom="57dp"
         android:background="@drawable/email"
         android:hint="Description"
-        android:paddingLeft="15dp"
+        android:paddingStart="15dp"
         android:paddingTop="8dp"
         android:textAlignment="center"
         android:textColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.454"
+        app:layout_constraintBottom_toTopOf="@+id/button4"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tVTitle"
-        app:layout_constraintVertical_bias="0.136" />
+        app:layout_constraintTop_toBottomOf="@+id/tVTitle" />
 
     <Button
         android:id="@+id/button4"
@@ -128,10 +114,35 @@
         android:layout_width="38dp"
         android:layout_height="38dp"
         android:layout_marginEnd="88dp"
-        android:layout_marginBottom="56dp"
+        android:layout_marginBottom="64dp"
         android:background="@drawable/attach"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:srcCompat="@drawable/location" />
+
+    <Spinner
+        android:id="@+id/tVDepartment"
+        android:layout_width="304dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/email"
+        app:layout_constraintBottom_toTopOf="@+id/tVTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView6" />
+
+    <TextView
+        android:id="@+id/textView6"
+        android:layout_width="293dp"
+        android:layout_height="23dp"
+        android:layout_marginStart="57dp"
+        android:layout_marginTop="14dp"
+        android:text="@string/please_choose_a_department"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium"
+        android:textColor="#000000"
+        app:layout_constraintBottom_toTopOf="@+id/tVDepartment"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tVDate" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

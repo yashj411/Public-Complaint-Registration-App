@@ -6,8 +6,11 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.webkit.MimeTypeMap;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Spinner;
 import android.widget.Toast;
 
 import androidx.annotation.NonNull;
@@ -25,8 +28,9 @@ import com.google.firebase.storage.FirebaseStorage;
 import com.google.firebase.storage.StorageReference;
 import com.google.firebase.storage.UploadTask;
 
-public class Register extends AppCompatActivity {
-    EditText tVName,tVDate,tVDepartment,tVTitle,tVDescription;
+public class Register extends AppCompatActivity implements AdapterView.OnItemSelectedListener {
+    EditText tVName,tVDate,tVTitle,tVDescription;
+    Spinner tVDepartment;
     Button button4,button7;
     StorageReference mStorageRef;
      public Uri imguri;
@@ -34,6 +38,7 @@ public class Register extends AppCompatActivity {
     long maxid=0;
     String status="Due";
     String imageid=null;
+    String dept;
     User user;
 
     @Override
@@ -49,6 +54,11 @@ public class Register extends AppCompatActivity {
         button7=findViewById(R.id.button7);
         mStorageRef= FirebaseStorage.getInstance().getReference("Images");
         user=new User();
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,R.array.depts, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        tVDepartment.setAdapter(adapter);
+        tVDepartment.setOnItemSelectedListener(this);
+        tVDepartment.setTag("Department");
         reff= FirebaseDatabase.getInstance().getReference().child("User");
 
          button7.setOnClickListener(new View.OnClickListener() {
@@ -74,13 +84,16 @@ public class Register extends AppCompatActivity {
         button4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                user.setName(tVName.getText().toString().trim());
-                user.setDate(tVDate.getText().toString().trim());
-                user.setDepartment(tVDepartment.getText().toString().trim());
-                user.setTitle(tVTitle.getText().toString().trim());
-                user.setDescription(tVDescription.getText().toString().trim());
+                user.setName(tVName.getText().toString());
+                user.setDate(tVDate.getText().toString());
+                user.setDepartment(dept);
+                user.setTitle(tVTitle.getText().toString());
+                user.setDescription(tVDescription.getText().toString());
                 user.setStatus(status);
-                Fileuploader();
+                if(imageid!=null)
+                {
+                    Fileuploader();
+                }
                 user.setImageID(imageid);
                 reff.child(String.valueOf(maxid+1)).setValue(user);
                 //Toast.makeText(Register.this,"Your complaint has been registered successfully",Toast.LENGTH_SHORT).show();
@@ -138,4 +151,13 @@ public class Register extends AppCompatActivity {
         }
     }
 
+    @Override
+    public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+        dept = parent.getItemAtPosition(position).toString();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> parent) {
+
+    }
 }

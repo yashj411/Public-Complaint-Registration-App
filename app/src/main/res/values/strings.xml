@@ -2,4 +2,12 @@
     <string name="app_name">PublicComplaintRegistration</string>
     <string name="your_complaint_has_been_registered_with_us_successfully">Your complaint has been registered with us successfully !</string>
     <string name="main_menu"><![CDATA[Main menu >]]></string>
+    <string name="please_choose_a_department">Please choose a department :</string>
+    <string-array name="depts">
+        <item>N/A</item>
+        <item>Sanitation</item>
+        <item>MSCB</item>
+        <item>Water Department</item>
+        <item>Other Department</item>
+    </string-array>
 </resources>
