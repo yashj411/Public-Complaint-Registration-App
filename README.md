@@ -6,14 +6,14 @@ Public Complaint Registration App is an android application which allows users t
 
 
 ## Screenshots
-
-<img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS1.png" width="16%" >
-<img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS2.png" width="16%" >
-<img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS3.png" width="16%" >
-<img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS4.png" width="16%" >
-<img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS5.png" width="16%" >
-<img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS6.png" width="16%" >
-
+<p float="left" >
+  <img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS1.png" width="16%" >
+  <img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS2.png" width="16%" >
+  <img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS3.png" width="16%" >
+  <img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS4.png" width="16%" >
+  <img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS5.png" width="16%" >
+  <img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS6.png" width="16%" >
+</p>
 
 ## Authors
 
