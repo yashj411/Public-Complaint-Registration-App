@@ -14,10 +14,3 @@ Public Complaint Registration App is an android application which allows users t
   <img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS5.png" width="16%" >
   <img src="https://github.com/umeshthakre/PublicComplaintRegistration/blob/Final/images/SS6.png" width="16%" >
 </p>
-
-## Authors
-
-- [@umeshthakre](https://github.com/umeshthakre)
-- [@piyushsakhare](https://github.com/piyushsakhare)
-- [@yashj411](https://github.com/yashj411) 
-
